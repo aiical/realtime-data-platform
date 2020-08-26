@@ -1,0 +1,22 @@
+process:
+  - name: demo_collection
+    common:
+      host: k8s-master01
+      port: 3306
+      username: maxwell
+      password: maxwell
+    mysql:
+      - database: animal
+        tables:
+          - dog
+          - cat
+      - database: animal2
+        tables:
+          - dog
+          - cat
+    kafka:
+      bootstrap: kafka1:9092,kafka2:9092,kafka3:9092
+      zkServer: k8s-master01:32184,k8s-master01:32185,k8s-master01:32186/kafka
+      topic: maxwell
+      partition: 3
+      duplication: 3

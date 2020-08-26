@@ -1,0 +1,36 @@
+<assembly>
+    <id>kafka-to-kudu</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <directoryMode>0755</directoryMode>
+            <fileMode>0755</fileMode>
+            <includes>
+                <include>**.sh</include>
+            </includes>
+            <excludes>
+                <exclude>*.formatted</exclude>
+            </excludes>
+            <lineEnding>unix</lineEnding>
+        </fileSet>
+        <fileSet>
+            <directory>jar</directory>
+            <outputDirectory></outputDirectory>
+            <fileMode>0644</fileMode>
+        </fileSet>
+    </fileSets>
+    <files>
+        <file>
+            <source>conf/table-fields-${profiles.activation}.yaml</source>
+            <outputDirectory>conf</outputDirectory>
+            <destName>table-fields.yaml</destName>
+            <fileMode>0644</fileMode>
+            <lineEnding>unix</lineEnding>
+        </file>
+    </files>
+</assembly>

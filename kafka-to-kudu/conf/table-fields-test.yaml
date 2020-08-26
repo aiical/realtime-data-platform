@@ -1,0 +1,48 @@
+- database: animal
+  table:
+    - name: dog
+      column:
+        - cName: d_id
+          cType: INT64
+          isPrimaryKey: true
+        - cName: d_name
+          cType: STRING
+        - cName: d_age
+          cType: INT16
+        - cName: d_score
+          cType: DOUBLE
+    - name: cat
+      column:
+        - cName: c_id
+          cType: INT64
+          isPrimaryKey: true
+        - cName: c_name
+          cType: STRING
+        - cName: c_age
+          cType: INT16
+        - cName: c_score
+          cType: DOUBLE
+- database: animal2
+  table:
+    - name: dog
+      column:
+        - cName: d_id
+          cType: INT64
+          isPrimaryKey: true
+        - cName: d_name
+          cType: STRING
+        - cName: d_age
+          cType: INT16
+        - cName: d_score
+          cType: DOUBLE
+    - name: cat
+      column:
+        - cName: c_id
+          cType: INT64
+          isPrimaryKey: true
+        - cName: c_name
+          cType: STRING
+        - cName: c_age
+          cType: INT16
+        - cName: c_score
+          cType: DOUBLE
